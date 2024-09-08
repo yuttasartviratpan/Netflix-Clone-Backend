@@ -41,3 +41,12 @@ Video Tag Update:
 For the video to have it's tag added in init data.
 You need to drop the login_webapp schema first.
 Then create login_webapp schema again, then run the backend again
+------------------------------------------------------
+# How to boot/run stuff
+If you just started by cloning this projects. Then:
+1. Go get a maven wrapper to be able to run the "WebApplication.java"
+2. Run script start-mysql.sh
+3. Run script start-nginx-vod-local.sh
+4. Pray the connection can get through. May need to edit application.properties to match the database's host, username and password
+5. If **4.** is successful, run WebApplication.java with maven wrapper
+6. If nothing breaks on **5.** run Frontend

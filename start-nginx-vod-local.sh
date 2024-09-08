@@ -1,3 +1,5 @@
 #!/bin/bash
 
-docker run --name nginx-vod  -p 127.0.0.1:8082:8080 -v /Users/sai/docker/videos:/opt/static/videos -v /Users/sai/docker/config/nginx.conf:/usr/local/nginx/conf/nginx.conf -d nytimes/nginx-vod-module
+path=$(basename $(pwd) | tr 'A-Z' 'a-z' )
+
+docker run --name nginx-vod  -p 0.0.0.0:8082:8080 -v "$path/videos":/opt/static/videos "$path/nginx.conf":/usr/local/nginx/conf/nginx.conf -d nytimes/nginx-vod-module

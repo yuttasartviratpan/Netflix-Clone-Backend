@@ -46,7 +46,9 @@ Then create login_webapp schema again, then run the backend again
 If you just started by cloning this projects. Then:
 1. Go get a maven wrapper to be able to run the "WebApplication.java"
 2. Run script start-mysql.sh
-3. Run script start-nginx-vod-local.sh
+3. Run script start-nginx-vod-local.sh, make sure you set the path correctly to where the nginx.conf is. "videos/" can really just be anywhere 
 4. Pray the connection can get through. May need to edit application.properties to match the database's host, username and password
 5. If **4.** is successful, run WebApplication.java with maven wrapper
 6. If nothing breaks on **5.** run Frontend
+
+NOTE: 0.0.0.0 is basically 127.0.0.1, but it listens on all interfaces. This is so that we can actually connect a WSL Docker since they live on Virtualization tech network interface.
